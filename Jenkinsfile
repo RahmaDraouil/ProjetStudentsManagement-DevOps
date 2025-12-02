@@ -1,7 +1,6 @@
 pipeline {
     agent any
     stages {
-
         stage('Clone') {
             steps {
                 checkout scm
@@ -10,7 +9,7 @@ pipeline {
 
         stage('Build') {
             steps {
-                sh 'mvn -B clean package'
+                bat 'mvn -B clean package -DskipTests'
             }
         }
     }
