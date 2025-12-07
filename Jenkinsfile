@@ -20,7 +20,7 @@ pipeline {
         
         stage('SonarQube Analysis') {
             steps {
-                withSonarQubeEnv('SonarTest') {
+                withSonarQubeEnv('Sonartest') {
                     sh """
                         mvn sonar:sonar \
                         -Dsonar.projectKey=ProjetStudentsManagement \
